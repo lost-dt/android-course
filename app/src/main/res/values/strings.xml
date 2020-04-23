@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">android-course</string>
+    <string name="favorite_language_message">Select your favorite Programming Language:</string>
+    <string name="scala_language">Scala</string>
+    <string name="java_language">Java</string>
+    <string name="python_language">Python</string>
+    <string name="r_language">R</string>
+    <string name="button_submit">Submit</string>
+    <string name="selected_languages">Selected Languages</string>
+
+</resources>

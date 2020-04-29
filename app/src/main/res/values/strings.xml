@@ -7,5 +7,6 @@
     <string name="r_language">R</string>
     <string name="button_submit">Submit</string>
     <string name="selected_languages">Selected Languages</string>
+    <string name="error_message">Enter your answer please</string>
 
 </resources>

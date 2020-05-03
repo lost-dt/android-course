@@ -19,7 +19,7 @@
         android:textStyle="bold"/>
 
     <TextView
-        android:id="@+id/output"
+        android:id="@+id/selectedLanguagesOutput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/selected_languages"

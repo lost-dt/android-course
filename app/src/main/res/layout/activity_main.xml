@@ -9,11 +9,10 @@
     android:padding="10dp"
     tools:context=".MainActivity">
 
-
     <fragment
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:name="com.kpi.fiot.dt.androidcourse.QuestionFragment"
+        android:name="com.kpi.fiot.dt.androidcourse.fragment.QuestionFragment"
         android:id="@+id/question_fragment"
         app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintEnd_toEndOf="parent" tools:layout="@layout/question_fragment"
@@ -22,10 +21,9 @@
     <fragment
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:name="com.kpi.fiot.dt.androidcourse.AnswerFragment"
-        android:id="@+id/answer_fragment"
+        android:name="com.kpi.fiot.dt.androidcourse.fragment.QuickAnswerFragment"
+        android:id="@+id/quick_answer_fragment"
         app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintEnd_toEndOf="parent" tools:layout="@layout/answer_fragment" />
-
+        app:layout_constraintEnd_toEndOf="parent" tools:layout="@layout/quick_answer_fragment" />
 
 </LinearLayout>

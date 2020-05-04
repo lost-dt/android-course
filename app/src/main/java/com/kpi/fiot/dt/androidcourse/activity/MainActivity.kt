@@ -32,14 +32,16 @@ class MainActivity : AppCompatActivity(), QuestionFragment.QuestionListener {
             supportFragmentManager.findFragmentById(R.id.quick_answer_fragment) as QuickAnswerFragment
         answerFragment.changeText(selectedLanguages)
 
-        val answer = Answer(
-            id = (0..1000).random(),
-            answerText = selectedLanguages,
-            questionText = R.string.favorite_language_message.toString(),
-            timeStamp = DateTimeFormatter.ISO_INSTANT.format(Instant.now()).toString()
-        )
+        if (selectedLanguages.isNotEmpty()) {
+            val answer = Answer(
+                id = (0..1000).random(),
+                answerText = selectedLanguages,
+                questionText = R.string.favorite_language_message.toString(),
+                timeStamp = DateTimeFormatter.ISO_INSTANT.format(Instant.now()).toString()
+            )
 
-        db.addAnswer(answer)
+            db.addAnswer(answer)
+        }
     }
 
     fun displayHistory(view: View) {

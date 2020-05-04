@@ -8,5 +8,7 @@
     <string name="button_submit">Submit</string>
     <string name="selected_languages">Selected Languages</string>
     <string name="error_message">Enter your answer please</string>
+    <string name="empty_database">There is not date in database!</string>
+    <string name="history">Show History</string>
 
 </resources>

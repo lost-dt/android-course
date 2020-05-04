@@ -1,4 +1,4 @@
-package com.kpi.fiot.dt.androidcourse
+package com.kpi.fiot.dt.androidcourse.fragment
 
 import android.content.Context
 import android.os.Bundle
@@ -9,12 +9,13 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.kpi.fiot.dt.androidcourse.R
 
 class QuestionFragment: Fragment() {
 
-    var activityCallback: QuestionFragment.QuestionListener? = null
+    var activityCallback: QuestionListener? = null
     interface QuestionListener {
-        fun onButtonClick(selectedLanguages: String)
+        fun receiveAnswer(selectedLanguages: String)
     }
 
     override fun onCreateView(
@@ -49,21 +50,21 @@ class QuestionFragment: Fragment() {
 
         validateInput()
 
-        var result = ""
+        var result = ArrayList<String>()
         if(checkBoxScala!!.isChecked){
-            result += "\n Scala"
+            result.add("Scala")
         }
         if(checkBoxJava!!.isChecked){
-            result += "\n Java"
+            result.add("Java")
         }
         if(checkBoxPython!!.isChecked){
-            result += "\n Python"
+            result.add("Python")
         }
         if(checkBoxR!!.isChecked){
-            result += "\n R"
+            result.add("R")
         }
 
-        activityCallback?.onButtonClick(result)
+        activityCallback?.receiveAnswer(result.joinToString(separator = ","))
     }
 
     private fun validateInput() {
@@ -73,7 +74,8 @@ class QuestionFragment: Fragment() {
         val checkBoxR = view?.findViewById<CheckBox>(R.id.cd_r)
         if(!checkBoxScala!!.isChecked and !checkBoxJava!!.isChecked
                 and !checkBoxPython!!.isChecked and !checkBoxR!!.isChecked) {
-            Toast.makeText(activity, R.string.error_message, Toast.LENGTH_LONG).show()
+            Toast.makeText(activity,
+                R.string.error_message, Toast.LENGTH_LONG).show()
         }
     }
 }

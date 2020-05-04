@@ -1,13 +1,14 @@
-package com.kpi.fiot.dt.androidcourse
+package com.kpi.fiot.dt.androidcourse.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.answer_fragment.*
+import com.kpi.fiot.dt.androidcourse.R
+import kotlinx.android.synthetic.main.quick_answer_fragment.*
 
-class AnswerFragment: Fragment() {
+class QuickAnswerFragment: Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -15,7 +16,7 @@ class AnswerFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.answer_fragment, container, false)
+        return inflater.inflate(R.layout.quick_answer_fragment, container, false)
     }
 
     fun changeText(selectedLanguages: String) {

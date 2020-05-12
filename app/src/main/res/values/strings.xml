@@ -10,5 +10,11 @@
     <string name="error_message">Enter your answer please</string>
     <string name="empty_database">There is not date in database!</string>
     <string name="history">Show History</string>
+    <string name="play">Play</string>
+    <string name="pause">Pause</string>
+    <string name="stop">Stop</string>
+    <string name="browse">Browse</string>
+    <string name="audio">Audio</string>
+    <string name="video">Video</string>
 
 </resources>

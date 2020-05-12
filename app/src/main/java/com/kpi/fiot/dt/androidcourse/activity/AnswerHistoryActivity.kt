@@ -10,7 +10,6 @@ import com.kpi.fiot.dt.androidcourse.db.DBHelper
 import com.kpi.fiot.dt.androidcourse.model.Answer
 import kotlinx.android.synthetic.main.activity_answer_history.*
 
-@SuppressLint("Registered")
 class AnswerHistoryActivity : AppCompatActivity() {
 
     internal lateinit var db: DBHelper
